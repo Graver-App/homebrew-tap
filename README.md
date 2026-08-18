@@ -3,7 +3,8 @@
 The Homebrew tap for [Graver](https://graver.dev), the native Mac workbench for
 Looker + Dataform development.
 
-Graver 0.1.0 is released. Signed with Developer ID and notarized by Apple.
+Releases are signed with Developer ID and notarized by Apple. The version this
+tap installs is whatever `Casks/graver.rb` names — currently 0.1.1.
 
 ## Install
 
@@ -27,6 +28,11 @@ graver views/orders.view.lkml
 ```
 
 Requires macOS 13 (Ventura) or later. Universal — Apple Silicon and Intel.
+
+Two things Graver uses but does not bundle: **Node**, because Dataform runs
+through `npx @dataform/cli` pinned to the project's own `dataformCoreVersion`,
+and **application-default credentials** (`gcloud auth application-default
+login`) for the BigQuery work. Graver stores no credentials of its own.
 
 ## Upgrading
 
