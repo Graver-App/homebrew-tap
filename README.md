@@ -3,9 +3,9 @@
 The Homebrew tap for [Graver](https://graver.dev), the native Mac workbench for
 Looker + Dataform development.
 
-Graver is in development; the cask lands here with the first release.
+Graver 0.1.0 is released. Signed with Developer ID and notarized by Apple.
 
-## Install (once released)
+## Install
 
 ```bash
 brew install --cask graver-app/tap/graver
@@ -15,10 +15,13 @@ Or add the tap first, then install:
 
 ```bash
 brew tap graver-app/tap
+brew trust graver-app/tap
 brew install --cask graver
 ```
 
-On Homebrew 6+, third-party taps require a one-time trust grant:
+The trust step is required, not advisory — without it `install` stops with
+*"Refusing to load cask … from untrusted tap"*. Tap, trust, install, in that
+order:
 
 ```bash
 brew tap graver-app/tap
