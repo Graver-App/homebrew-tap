@@ -1,6 +1,6 @@
 cask "graver" do
-  version "0.4.0"
-  sha256 "03a7d99602a7b97895075e7bf2a385ab3c4d3d2f7093badae3612a1d7a3839fd"
+  version "0.4.1"
+  sha256 "be40a271607cbdc84e4f012e20e2ed51965c00be62b90a5bcd4e20e2d5668fbf"
 
   url "https://github.com/Graver-App/homebrew-tap/releases/download/v#{version}/Graver.dmg"
   name "Graver"
