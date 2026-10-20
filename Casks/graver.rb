@@ -1,6 +1,6 @@
 cask "graver" do
-  version "0.3.0"
-  sha256 "b39f39bcebd186d5c50be160490f40c233c306f68e533f734f276854e600984a"
+  version "0.4.0"
+  sha256 "03a7d99602a7b97895075e7bf2a385ab3c4d3d2f7093badae3612a1d7a3839fd"
 
   url "https://github.com/Graver-App/homebrew-tap/releases/download/v#{version}/Graver.dmg"
   name "Graver"
@@ -13,6 +13,10 @@ cask "graver" do
 
   app "Graver.app"
   binary "#{appdir}/Graver.app/Contents/Resources/graver"
+  # The headless LookML audit CLI, in the bundle from 0.4.0 (Graver-App/graver#23).
+  # It could only be built from source before this release, and it is the only way
+  # to reach --record-bigquery / --replay-bigquery.
+  binary "#{appdir}/Graver.app/Contents/MacOS/graver-lookml"
 
   zap trash: [
     "~/Library/Application Support/dev.graver.app",
